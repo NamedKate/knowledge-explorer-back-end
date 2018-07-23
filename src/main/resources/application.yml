@@ -1,0 +1,30 @@
+# 知识漫游系统 认证与授权模块
+# Port Ranges:
+# Register Center 8000~8100
+# Auth Server 8201~8300
+# Tree Module 8301~8400
+# Community Module 8401~8500
+# API Gateway 8501~8600
+server:
+  port: 8201
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8000/eureka
+
+security:
+  oauth2:
+    resource:
+      filter-order: 3
+spring:
+  application:
+    name: knowledge-auth-server
+  data:
+    neo4j:
+      uri: http://172.21.38.201:7474
+      username: neo4j
+      password: helloworld
+  redis:
+    url: redis://172.21.38.201:6379
+
