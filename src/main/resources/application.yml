@@ -11,8 +11,10 @@ server:
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:8000/eureka
-
+      defaultZone: http://knowledge-register-center:8000/eureka
+  instance:
+    prefer-ip-address: true
+    hostname: knowledge-auth-server
 security:
   oauth2:
     resource:
@@ -22,9 +24,9 @@ spring:
     name: knowledge-auth-server
   data:
     neo4j:
-      uri: http://172.21.38.201:7474
+      uri: http://localhost:7474
       username: neo4j
       password: helloworld
   redis:
-    url: redis://172.21.38.201:6379
+    url: redis://localhost:6379
 

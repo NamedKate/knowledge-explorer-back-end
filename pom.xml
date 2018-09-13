@@ -6,7 +6,7 @@
 	<groupId>com.ke</groupId>
 	<artifactId>knowledge-auth-server</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>pom</packaging>
+	<packaging>jar</packaging>
 
 	<name>knowledge-auth-server</name>
 	<description>An auth server based on OAuth2 protocol.</description>
