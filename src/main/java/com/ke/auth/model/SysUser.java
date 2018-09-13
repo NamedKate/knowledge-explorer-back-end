@@ -1,5 +1,6 @@
 package com.ke.auth.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 import org.neo4j.ogm.annotation.GraphId;
 import org.neo4j.ogm.annotation.NodeEntity;
@@ -18,6 +19,7 @@ public class SysUser {
 	private Long id;
 
 	private String username;
+	@JsonIgnore
 	private String password;
 	private Byte sex;
 	private String intro;
@@ -31,5 +33,7 @@ public class SysUser {
 	public Set<GrantedAuthority> getAuthorities(){
 		return roleList.stream().map(role -> new SimpleGrantedAuthority(role.getRolename())).collect(Collectors.toSet());
 	}
+
+	public SysUser(){}
 
 }
