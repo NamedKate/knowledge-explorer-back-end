@@ -21,7 +21,7 @@ function start()
         echo "$SpringBoot is running..."
     else
         echo "Start $SpringBoot success..."
-        nohup java -jar $SpringBoot > /dev/null 2>&1 &
+        nohup java -jar -Xmx256m -Xms256m $SpringBoot > /dev/null 2>&1 &
     fi
 }
 
