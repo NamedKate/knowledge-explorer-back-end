@@ -31,7 +31,7 @@ public class SysUser {
     private Set<Role> roleList;
 
 	public Set<GrantedAuthority> getAuthorities(){
-		return roleList.stream().map(role -> new SimpleGrantedAuthority(role.getRolename())).collect(Collectors.toSet());
+		return roleList.stream().map(role -> new SimpleGrantedAuthority(role.getRoleName())).collect(Collectors.toSet());
 	}
 
 	public SysUser(){}

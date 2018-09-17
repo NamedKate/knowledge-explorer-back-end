@@ -14,7 +14,7 @@ public class Role {
     @Relationship(type = "HAVE")
     Set<Permission> permissionList;
 
-	private String rolename;
+	private String roleName;
 	private String code;
     @GraphId
     private Long id;

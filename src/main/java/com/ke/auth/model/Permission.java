@@ -11,6 +11,6 @@ public class Permission {
     @GraphId
 	private Long id;
 
-	private String permissionname;
+	private String permissionName;
 	private String code;
 }
