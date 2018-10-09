@@ -26,6 +26,7 @@ public class SysUser {
 	private String phone;
 	private String email;
 	private String nickname;
+    private String avatar;
 
 	@Relationship(type = "HAVE")
     private Set<Role> roleList;
